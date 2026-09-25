@@ -1,0 +1,1042 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Antonin Marchand</title>
+<meta name="description" content="Portfolio d'Antonin Marchand : communication, création audiovisuelle, son et graphisme.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+:root{
+  --bg:#F1F3F7;
+  --surface:#FFFFFF;
+  --surface-2:#E7EBF2;
+  --ink:#0B1322;
+  --muted:#5A6578;
+  --line:#D3D9E4;
+  --accent:#2447E0;
+  --accent-soft:#DDE4FC;
+  --rec:#E0393E;
+  --cine:#0A0F1A;
+  --cine-2:#131A2A;
+  --cine-ink:#EEF1F7;
+  --cine-muted:#9AA4B8;
+  --cine-line:rgba(238,241,247,.16);
+  --cine-accent:#7C97FF;
+  --gut:clamp(16px,4vw,48px);
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#080D18;--surface:#0F1626;--surface-2:#161F33;
+    --ink:#E8EDF6;--muted:#98A3B8;--line:#232E45;
+    --accent:#7390FF;--accent-soft:#1A2550;--rec:#FF5A5F;
+    --cine:#050912;--cine-2:#0E1524;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#080D18;--surface:#0F1626;--surface-2:#161F33;
+  --ink:#E8EDF6;--muted:#98A3B8;--line:#232E45;
+  --accent:#7390FF;--accent-soft:#1A2550;--rec:#FF5A5F;
+  --cine:#050912;--cine-2:#0E1524;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,video{max-width:100%;display:block}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1200px;margin-inline:auto;padding-inline:var(--gut)}
+[tabindex="-1"]:focus{outline:none}
+
+.label{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.05}
+h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-.025em}
+h3{font-size:1.2rem;font-weight:700;letter-spacing:-.01em}
+.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0}
+p{margin:0}
+
+/* barre + navigation */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px;position:relative}
+.brand{font-family:var(--display);font-weight:800;text-decoration:none;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.brand-mark{width:26px;height:26px;border-radius:6px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-size:.72rem;font-family:var(--mono);font-weight:500}
+.nav{display:flex;gap:2px;flex-wrap:wrap}
+.nav a{font-size:.875rem;text-decoration:none;padding:6px 10px;border-radius:6px;color:var(--muted);position:relative}
+.nav a:hover{color:var(--ink);background:var(--surface-2)}
+.nav a[aria-current="page"]{color:var(--ink);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.nav a[aria-current="page"]::before{content:"";position:absolute;left:10px;right:10px;bottom:-13px;height:2px;background:var(--accent);border-radius:2px}
+.menu-btn{display:none;align-items:center;gap:8px;font:500 .8125rem var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer}
+.menu-btn i{width:14px;height:10px;display:inline-block;background:linear-gradient(currentColor 0 0) top/100% 2px no-repeat,linear-gradient(currentColor 0 0) center/100% 2px no-repeat,linear-gradient(currentColor 0 0) bottom/100% 2px no-repeat}
+
+/* menu déroulant Stages */
+.nav-drop{position:relative}
+.nav-drop-btn{position:relative;font:inherit;font-size:.875rem;background:none;border:0;cursor:pointer;padding:6px 10px;border-radius:6px;color:var(--muted);display:inline-flex;align-items:center;gap:5px}
+.nav-drop-btn:hover{color:var(--ink);background:var(--surface-2)}
+.nav-drop-btn.active{color:var(--ink);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.nav-drop-btn.active::before{content:"";position:absolute;left:10px;right:10px;bottom:-13px;height:2px;background:var(--accent);border-radius:2px}
+.nav-drop-btn .care{font-size:.65em;transition:transform .15s ease}
+.nav-drop.open .nav-drop-btn .care{transform:rotate(180deg)}
+.nav-drop-panel{display:none;flex-direction:column;gap:2px;position:absolute;top:100%;left:0;margin-top:6px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px;min-width:200px;box-shadow:0 24px 48px -24px rgba(0,0,0,.35);z-index:30}
+.nav-drop.open .nav-drop-panel{display:flex}
+.nav-drop-panel a{font-size:.875rem;text-decoration:none;padding:9px 10px;border-radius:6px;color:var(--muted)}
+.nav-drop-panel a:hover{color:var(--ink);background:var(--surface-2)}
+.nav-drop-panel a[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+
+/* pages */
+.page{animation:pagein .35s ease both}
+@keyframes pagein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* en-tête de page (pages intérieures) */
+.phead{background:var(--cine);color:var(--cine-ink);position:relative;overflow:hidden}
+.phead::before{content:"";position:absolute;inset:0;background:radial-gradient(55% 90% at 90% 20%,rgba(36,71,224,.32),transparent 70%),radial-gradient(35% 70% at 0% 100%,rgba(224,57,62,.14),transparent 70%);pointer-events:none}
+.phead .wrap{position:relative;padding-block:clamp(44px,7vw,96px) clamp(36px,5vw,64px);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}
+.phead .label{color:var(--cine-muted);display:flex;align-items:center;gap:10px}
+.phead .label .rec{color:var(--cine-ink)}
+.phead h1{font-size:clamp(2.6rem,7vw,5.6rem);font-weight:800;letter-spacing:-.045em;line-height:.92;margin-top:18px}
+.phead h1 .it{color:var(--cine-accent)}
+.phead .intro{font-size:1.15rem;line-height:1.55;max-width:56ch;color:var(--cine-muted);margin-top:20px}
+.phead .intro b{color:var(--cine-ink);font-weight:500}
+.phead .pnum{font-family:var(--display);font-weight:800;font-size:clamp(4rem,12vw,9rem);line-height:.8;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1px var(--cine-line)}
+.phead .quote{color:var(--cine-ink);margin-top:24px;max-width:52ch}
+
+/* HERO accueil */
+.hero{background:var(--cine);color:var(--cine-ink);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 80% at 85% 30%,rgba(36,71,224,.35),transparent 70%),radial-gradient(40% 60% at 0% 100%,rgba(224,57,62,.16),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,72px);align-items:center;padding-block:clamp(40px,6vw,80px)}
+.hero .label{color:var(--cine-muted)}
+.hero h1{font-size:clamp(3.2rem,8.4vw,7rem);font-weight:800;letter-spacing:-.05em;line-height:.88;margin-top:18px}
+.hero h1 .it{display:block;font-size:.62em;letter-spacing:-.01em;line-height:1;color:var(--cine-accent);margin-top:.18em}
+.lede{font-size:1.2rem;line-height:1.55;max-width:40ch;color:var(--cine-muted);margin-top:24px}
+.lede b{color:var(--cine-ink);font-weight:500}
+.meta-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{font-family:var(--mono);font-size:.75rem;padding:5px 10px;border:1px solid var(--cine-line);border-radius:999px;color:var(--cine-muted)}
+.chip b{color:var(--cine-ink);font-weight:500}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.9375rem;text-decoration:none;padding:12px 18px;border-radius:8px;border:1px solid currentColor;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-light{background:var(--cine-ink);color:var(--cine);border-color:var(--cine-ink)}
+.btn-line{color:var(--cine-ink);border-color:var(--cine-line)}
+.btn-line:hover{background:var(--cine-2)}
+
+/* viseur */
+.vf{position:relative;aspect-ratio:933/1400;max-width:100%;border-radius:14px;overflow:hidden;background:#000;font-family:var(--mono);font-size:.72rem;color:#EEF1F7;box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+.vf img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.05)}
+.vf-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:33.333% 33.333%;background-position:-1px -1px}
+.vf-c{position:absolute;width:24px;height:24px;border:0 solid #EEF1F7}
+.c-tl{top:14px;left:14px;border-top-width:2px;border-left-width:2px}
+.c-tr{top:14px;right:14px;border-top-width:2px;border-right-width:2px}
+.c-bl{bottom:14px;left:14px;border-bottom-width:2px;border-left-width:2px}
+.c-br{bottom:14px;right:14px;border-bottom-width:2px;border-right-width:2px}
+.vf-top,.vf-bot{position:absolute;left:48px;right:48px;display:flex;justify-content:space-between;gap:10px;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.vf-top{top:17px}.vf-bot{bottom:17px}
+.rec{display:inline-flex;align-items:center;gap:7px;font-weight:500;letter-spacing:.08em}
+.rec i{width:9px;height:9px;border-radius:50%;background:#E0393E;box-shadow:0 0 10px #E0393E;animation:blink 1.2s steps(2,start) infinite}
+@keyframes blink{to{visibility:hidden}}
+.tc{font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.meters{position:absolute;right:16px;top:48px;bottom:48px;display:flex;gap:3px}
+.meter{width:5px;border-radius:2px;background:rgba(255,255,255,.15);overflow:hidden;display:flex;align-items:flex-end}
+.meter span{display:block;width:100%;height:60%;background:linear-gradient(to top,#2447E0 0 60%,#F2C94C 60% 80%,#E0393E 80%);animation:lvl 1s ease-in-out infinite alternate}
+.meter:nth-child(2) span{animation-duration:.8s;animation-direction:alternate-reverse}
+@keyframes lvl{0%{height:38%}45%{height:74%}70%{height:52%}100%{height:86%}}
+
+/* bandeau */
+.ticker{background:var(--accent);color:#fff;overflow:hidden;white-space:nowrap}
+.ticker-track{display:inline-flex;padding-block:12px;animation:scroll 38s linear infinite}
+.ticker span{font-family:var(--display);font-weight:700;font-size:1.05rem;letter-spacing:-.01em;padding-inline:18px;display:inline-flex;align-items:center;gap:36px}
+.ticker span::after{content:"✦";font-size:.7rem;opacity:.7}
+.ticker .it{font-size:1.25rem;font-weight:400}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.rec i,.meter span,.ticker-track,.page{animation:none!important}}
+
+/* sections */
+section{padding-block:clamp(56px,8vw,104px)}
+section + section{border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:200px 1fr;gap:24px;margin-bottom:clamp(28px,4vw,48px);align-items:baseline}
+.sec-head p{color:var(--muted);max-width:60ch;margin-top:12px}
+.sub{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-block:0 18px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.sub.gap{margin-top:clamp(48px,6vw,72px)}
+
+/* démo */
+.demo{background:var(--cine);color:var(--cine-ink)}
+.demo .sec-head .label,.demo .sec-head p{color:var(--cine-muted)}
+.player{position:relative;display:block;aspect-ratio:16/9;max-width:100%;border-radius:14px;overflow:hidden;text-decoration:none;background:#000;isolation:isolate}
+.player img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease,opacity .3s ease;opacity:.85}
+.player:hover img{transform:scale(1.03);opacity:1}
+.player::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(5,9,18,.85),transparent 55%);z-index:1}
+.play{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:clamp(64px,9vw,96px);aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;transition:transform .2s ease}
+.play::before{content:"";margin-left:6px;border-left:clamp(18px,2.4vw,26px) solid #0B1322;border-block:clamp(11px,1.5vw,16px) solid transparent}
+.player:hover .play{transform:translate(-50%,-50%) scale(1.06)}
+.player-cap{position:absolute;z-index:2;left:clamp(16px,3vw,32px);right:clamp(16px,3vw,32px);bottom:clamp(14px,2.5vw,28px);display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.player-cap strong{font-family:var(--display);font-size:clamp(1.4rem,3vw,2.2rem);letter-spacing:-.02em;line-height:1}
+.yt{font-family:var(--mono);font-size:.72rem;padding:5px 9px;border-radius:5px;background:rgba(255,255,255,.14);color:#fff;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);white-space:nowrap}
+
+/* profil */
+.profile{display:grid;grid-template-columns:200px 1fr;gap:24px}
+.profile-body{display:grid;gap:40px}
+.bio{font-family:var(--display);font-weight:500;font-size:clamp(1.35rem,2.4vw,1.85rem);line-height:1.3;letter-spacing:-.015em;max-width:40ch}
+.bio .it{color:var(--accent);font-size:1.1em}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.skill{background:var(--surface);padding:24px;display:flex;flex-direction:column;gap:10px}
+.skill p{color:var(--muted);font-size:.9375rem}
+.tools{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.tool{font-family:var(--mono);font-size:.72rem;font-weight:500;min-width:28px;height:24px;padding:0 7px;display:inline-grid;place-items:center;border-radius:5px;background:var(--accent-soft);color:var(--accent)}
+
+/* timeline */
+.timeline{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;overflow-x:auto}
+.tl-inner{min-width:820px;display:grid;grid-template-columns:52px repeat(5,1fr);gap:8px}
+.ruler{grid-column:2/-1;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;font-family:var(--mono);font-size:.75rem;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:8px;font-variant-numeric:tabular-nums}
+.ruler span{border-left:1px solid var(--line);padding-left:8px}
+.track-name{font-family:var(--mono);font-size:.75rem;color:var(--muted);display:flex;align-items:center}
+.clip{border-radius:6px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;min-height:64px;justify-content:center;text-decoration:none}
+.clip strong{font-size:.9375rem}
+.clip small{font-size:.8125rem;opacity:.85;line-height:1.4}
+.clip-v{background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+.clip-v strong{color:var(--accent)}
+.clip-next{background:var(--ink);color:var(--bg)}
+.clip-a{background:var(--surface-2);border:1px dashed var(--line);gap:6px;transition:border-color .15s ease}
+a.clip-a:hover{border-color:var(--accent);border-style:solid}
+.wave{height:22px;background:repeating-linear-gradient(90deg,var(--muted) 0 2px,transparent 2px 5px);-webkit-mask:linear-gradient(to bottom,transparent 15%,#000 15% 85%,transparent 85%);mask:linear-gradient(to bottom,transparent 15%,#000 15% 85%,transparent 85%);opacity:.35}
+
+/* sommaire (accueil) */
+.index{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.icard{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:220px;border-radius:12px;overflow:hidden;text-decoration:none;color:#fff;background:#000;isolation:isolate;padding:18px}
+.icard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .5s ease;opacity:.9}
+.icard::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(5,9,18,.92),rgba(5,9,18,.15) 70%)}
+.icard:hover img{transform:scale(1.05)}
+.icard .n{position:absolute;top:14px;left:18px;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:rgba(255,255,255,.8)}
+.icard strong{font-family:var(--display);font-size:1.5rem;letter-spacing:-.02em;line-height:1.05;display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+.icard strong span{font-family:var(--mono);font-size:1rem;transition:transform .15s ease}
+.icard:hover strong span{transform:translateX(4px)}
+.icard small{font-size:.85rem;color:rgba(255,255,255,.78);margin-top:4px}
+.icard.solid{background:var(--accent)}
+.icard.solid::after{display:none}
+.icard.pending{background:var(--cine);color:var(--cine-ink)}
+.icard.pending::after{display:none}
+.icard.pending small{color:var(--cine-muted)}
+
+/* vidéos */
+.vgrid{display:grid;grid-template-columns:1fr 1fr .64fr;gap:14px}
+.vcard{position:relative;display:block;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#000;color:#fff;text-decoration:none;isolation:isolate}
+.vcard img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.vcard:hover img{transform:scale(1.04)}
+.vcard::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(5,9,18,.92) 0,rgba(5,9,18,.35) 55%,transparent 80%);z-index:1}
+.vcap{position:absolute;z-index:2;left:14px;right:14px;bottom:12px;display:grid;gap:4px}
+.vcap strong{font-family:var(--display);font-size:1.05rem;line-height:1.15}
+.vcap small{font-size:.8125rem;color:rgba(255,255,255,.78);line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.vtags{position:absolute;z-index:2;top:10px;left:10px;right:10px;display:flex;justify-content:space-between;gap:8px}
+.vtags .tool{background:rgba(255,255,255,.92);color:#0B1322}
+.mini-play{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;transition:transform .2s ease}
+.mini-play::before{content:"";margin-left:3px;border-left:11px solid #0B1322;border-block:7px solid transparent}
+.vcard:hover .mini-play{transform:scale(1.1)}
+.reel-wrap{grid-column:3;grid-row:1/3;display:flex;flex-direction:column}
+.reel{flex:1;border-radius:10px;overflow:hidden;background:#000;position:relative;display:flex;flex-direction:column}
+.reel video{width:100%;height:100%;object-fit:cover;flex:1;min-height:0}
+.reel-cap{position:absolute;left:0;right:0;top:0;padding:10px;display:flex;justify-content:space-between;gap:8px;pointer-events:none}
+.reel-cap .tool{background:rgba(255,255,255,.92);color:#0B1322}
+.reel-cap .yt{background:#E0393E}
+.reel-text{margin-top:10px}
+.reel-text strong{font-family:var(--display);font-size:1rem}
+.reel-text p{font-size:.8125rem;color:var(--muted)}
+
+/* graphisme */
+.ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gitem{display:flex;flex-direction:column;gap:12px}
+.zoom{all:unset;cursor:zoom-in;display:block;border-radius:10px;overflow:hidden;background:var(--surface-2);position:relative}
+.zoom:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.zoom img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.zoom:hover img{transform:scale(1.03)}
+.r45{aspect-ratio:4/5}.r57{aspect-ratio:5/7}.r169{aspect-ratio:16/9}.r11{aspect-ratio:1}.r43{aspect-ratio:4/3}
+.contain img{object-fit:contain}
+.bg-cards{background:#DCE2C6}
+.bg-dark{background:#0B1322}
+.gitem h3{font-size:1.05rem}
+.gitem p{font-size:.875rem;color:var(--muted);margin-top:3px}
+.gmeta{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+
+/* pages de stage */
+.fiche{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:clamp(40px,6vw,72px)}
+.fiche div{background:var(--surface);padding:16px 18px;display:grid;gap:4px}
+.fiche strong{font-family:var(--display);font-size:1.05rem}
+.mission{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:center}
+.mission + .mission{margin-top:clamp(48px,7vw,96px);padding-top:clamp(48px,7vw,96px);border-top:1px solid var(--line)}
+.mission.flip .mission-text{order:2}
+.mission-text{display:flex;flex-direction:column;gap:14px}
+.mnum{font-family:var(--mono);font-size:.8rem;color:var(--accent);letter-spacing:.06em}
+.mission-text h2{font-size:clamp(1.7rem,3.2vw,2.5rem)}
+.mission-text p{color:var(--muted);font-size:1.0625rem;max-width:52ch}
+.mission-text p b{color:var(--ink);font-weight:500}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.quote{font-family:var(--serif);font-style:italic;font-size:1.35rem;line-height:1.35;border-left:2px solid var(--rec);padding-left:16px}
+
+/* projets pro */
+.wall{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,2vw,20px)}
+.poster{display:flex;flex-direction:column;gap:12px}
+.client{font-family:var(--mono);font-size:.72rem;color:var(--accent);letter-spacing:.04em}
+.poster h3{font-size:1.05rem;margin-top:2px}
+.poster p{font-size:.875rem;color:var(--muted);margin-top:4px}
+.approach{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.approach div{background:var(--surface);padding:22px;display:grid;gap:8px;align-content:start}
+.approach p{color:var(--muted);font-size:.9375rem}
+
+/* projet perso */
+.music{background:var(--cine);color:var(--cine-ink);position:relative;overflow:hidden}
+.music-banner{position:absolute;inset:0 0 auto 0;height:min(420px,60%);background-size:cover;background-position:center;opacity:.5;-webkit-mask:linear-gradient(to bottom,#000 20%,transparent);mask:linear-gradient(to bottom,#000 20%,transparent)}
+.music .wrap{position:relative}
+.music .label{color:var(--cine-muted)}
+.music h2 .it{color:#F2A65A}
+.music-top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,64px);align-items:end;margin-bottom:clamp(32px,5vw,56px)}
+.music-top .big{font-size:1.15rem;color:var(--cine-muted);max-width:48ch}
+.music-top .big b{color:var(--cine-ink);font-weight:500}
+.covers{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:clamp(12px,2vw,20px);align-items:end}
+.cover-item{display:flex;flex-direction:column;gap:10px}
+.cover-item .zoom{background:var(--cine-2);border-radius:8px}
+.cover-item small{font-family:var(--mono);font-size:.72rem;color:var(--cine-muted)}
+.cover-item strong{font-family:var(--display);font-size:1.05rem}
+.spotify{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;padding:10px 16px;border-radius:999px;background:#1ED760;color:#06120A;font-weight:600;text-decoration:none;font-size:.9375rem}
+.spotify:hover{filter:brightness(1.06)}
+.chain{list-style:none;margin:clamp(40px,6vw,64px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--cine-line);border:1px solid var(--cine-line);border-radius:12px;overflow:hidden;counter-reset:step}
+.chain li{background:var(--cine-2);padding:22px;counter-increment:step;display:flex;flex-direction:column;gap:8px}
+.chain li::before{content:counter(step,decimal-leading-zero);font-family:var(--mono);font-size:.8rem;color:var(--cine-accent)}
+.chain p{font-size:.875rem;color:var(--cine-muted)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:end}
+.contact h2{font-size:clamp(2.4rem,6vw,4.6rem);letter-spacing:-.04em;line-height:.95}
+.contact h2 .it{color:var(--accent)}
+.contact .avail{margin-top:20px;color:var(--muted);max-width:44ch}
+.links a{display:flex;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid var(--line);text-decoration:none;overflow-wrap:anywhere}
+.links a:first-child{border-top:1px solid var(--line)}
+.links a:hover{color:var(--accent)}
+.links a span:last-child{font-family:var(--mono);transition:transform .15s ease}
+.links a:hover span:last-child{transform:translateX(4px)}
+.links small{font-family:var(--mono);font-size:.72rem;color:var(--muted);display:block}
+
+/* pagination bas de page */
+.pager{border-top:1px solid var(--line)}
+.pager .wrap{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding-block:28px}
+.pager a{display:flex;flex-direction:column;gap:4px;padding:18px 20px;border:1px solid var(--line);border-radius:12px;background:var(--surface);text-decoration:none;transition:border-color .15s ease,transform .15s ease}
+.pager a:hover{border-color:var(--accent);transform:translateY(-1px)}
+.pager a strong{font-family:var(--display);font-size:1.3rem;letter-spacing:-.015em}
+.pager .next{text-align:right;grid-column:2}
+
+footer .wrap{padding-block:28px 40px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:.8125rem;border-top:1px solid var(--line)}
+footer .tc{font-family:var(--mono)}
+footer a{text-decoration:none}
+footer a:hover{color:var(--accent)}
+
+/* visionneuse */
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(92vw,1100px);max-height:92vh;color:#fff}
+dialog.lb::backdrop{background:rgba(5,9,18,.88);backdrop-filter:blur(4px)}
+.lb figure{margin:0;display:grid;gap:10px;justify-items:center}
+.lb img{max-height:82vh;width:auto;border-radius:8px}
+.lb figcaption{font-family:var(--mono);font-size:.8rem;color:#C9D1E0;text-align:center}
+.lb-close{position:fixed;top:calc(16px + env(safe-area-inset-top,0px));right:16px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(5,9,18,.6);color:#fff;font-size:1.3rem;cursor:pointer}
+
+/* responsive */
+@media (max-width:980px){
+  .wall{grid-template-columns:repeat(2,1fr)}
+  .chain,.fiche{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+  .menu-btn{display:inline-flex}
+  .nav{display:none;position:absolute;top:100%;left:var(--gut);right:var(--gut);margin-top:8px;flex-direction:column;flex-wrap:nowrap;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:6px;box-shadow:0 24px 48px -24px rgba(0,0,0,.35)}
+  .bar.open .nav{display:flex}
+  .nav a{padding:12px 14px;font-size:1rem}
+  .nav a[aria-current="page"]::before{left:0;right:auto;top:10px;bottom:10px;width:3px;height:auto}
+}
+@media (max-width:860px){
+  .hero .wrap,.music-top,.contact,.mission{grid-template-columns:1fr}
+  .hero .vf{max-width:420px}
+  .mission.flip .mission-text{order:0}
+  .sec-head,.profile{grid-template-columns:1fr;gap:8px}
+  .skills,.approach{grid-template-columns:1fr}
+  .ggrid,.index{grid-template-columns:repeat(2,1fr)}
+  .covers{grid-template-columns:repeat(2,1fr)}
+  .vgrid{grid-template-columns:1fr 1fr}
+  .reel-wrap{grid-column:1/-1;grid-row:auto;max-width:340px;width:100%;justify-self:center}
+  .reel-wrap .reel{aspect-ratio:9/16;flex:none}
+  .phead .wrap{grid-template-columns:1fr}
+  .phead .pnum{display:none}
+}
+@media (max-width:560px){
+  .vgrid,.ggrid,.covers,.index{grid-template-columns:1fr}
+  .wall{grid-template-columns:1fr 1fr}
+  .chain,.fiche{grid-template-columns:1fr}
+  .vf-top,.vf-bot{left:42px;right:42px}
+  .hide-sm{display:none}
+  .pager .wrap{grid-template-columns:1fr}
+  .pager .next{grid-column:1}
+  .icard{min-height:180px}
+}
+</style>
+
+<header class="bar" id="bar">
+  <div class="wrap">
+    <a class="brand" href="#presentation"><span class="brand-mark">AM</span>Antonin Marchand</a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav"><i aria-hidden="true"></i>Menu</button>
+    <nav class="nav" id="nav" aria-label="Pages">
+      <a href="#presentation">Présentation</a>
+      <a href="#realisations">Réalisations</a>
+      <div class="nav-drop" id="stages-drop">
+        <button type="button" class="nav-drop-btn" id="stages-btn" aria-haspopup="true" aria-expanded="false">Stages<span class="care" aria-hidden="true">⌄</span></button>
+        <div class="nav-drop-panel" id="stages-panel">
+          <a href="#stage-1">Stage 1 · SE Shop Records</a>
+          <a href="#stage-2">Stage 2 · USDH Handball</a>
+          <a href="#stage-3">Stage 3 · HBC Thuir</a>
+        </div>
+      </div>
+      <a href="#projets-pro">Projets Pro</a>
+      <a href="#projet-perso">Projet Perso</a>
+      <a href="#issanka">Issanka</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ 01 · PRÉSENTATION ============ -->
+<div class="page" id="p-presentation" data-title="Présentation">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="label">Portfolio · Communication &amp; audiovisuel</span>
+        <h1 tabindex="-1">Antonin Marchand<span class="it">image, son &amp; récit</span></h1>
+        <p class="lede">Diplômé d'une licence Information-Communication, <b>admis en Master à Sup de Com Montpellier</b>. Je filme, j'enregistre, je monte et je mets en forme des messages pour les marques, les clubs et les artistes.</p>
+        <div class="meta-row">
+          <span class="chip"><b>Angers</b> / Montpellier</span>
+          <span class="chip">Vidéo · Son · Graphisme</span>
+          <span class="chip">Master <b>2026→</b></span>
+          <span class="chip">Alternance <b>Issanka</b> · Montpellier</span>
+        </div>
+        <div class="cta">
+          <a class="btn btn-light" href="#realisations">Voir mes réalisations <span aria-hidden="true">→</span></a>
+          <a class="btn btn-line" href="https://3e42d521-a443-4cc1-8403-c148299855ea.filesusr.com/ugd/ef4ac2_e7b2bee160194d628dfd1d09dc1407d8.pdf" target="_blank" rel="noopener">Télécharger mon CV ↓</a>
+        </div>
+      </div>
+      <div class="vf">
+        <img src="media/profil.jpg" alt="Portrait d'Antonin Marchand en clair-obscur" width="933" height="1400">
+        <div class="vf-grid" aria-hidden="true"></div>
+        <span class="vf-c c-tl" aria-hidden="true"></span><span class="vf-c c-tr" aria-hidden="true"></span>
+        <span class="vf-c c-bl" aria-hidden="true"></span><span class="vf-c c-br" aria-hidden="true"></span>
+        <div class="vf-top" aria-hidden="true"><span class="rec"><i></i>REC</span><span class="tc" id="tc">00:00:00:00</span></div>
+        <div class="meters" aria-hidden="true"><span class="meter"><span></span></span><span class="meter"><span></span></span></div>
+        <div class="vf-bot" aria-hidden="true"><span>1920×1080 · 25p</span><span class="hide-sm">ISO 800 · 1/50</span><span>A1 A2</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Montage</span><span class="it">Prise de son</span><span>Motion design</span><span class="it">Affiches</span><span>Mixage</span><span class="it">Community management</span><span>Branding</span><span class="it">Chronique à l'antenne</span>
+      <span>Montage</span><span class="it">Prise de son</span><span>Motion design</span><span class="it">Affiches</span><span>Mixage</span><span class="it">Community management</span><span>Branding</span><span class="it">Chronique à l'antenne</span>
+    </div>
+  </div>
+
+  <section class="demo">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Bande démo</span>
+        <div>
+          <h2>Mon année <span class="it">en 1 minute 30</span></h2>
+          <p>Tournages, émissions et captations réalisés en 2024-2025. La vidéo s'ouvre sur YouTube.</p>
+        </div>
+      </div>
+      <a class="player" href="https://youtu.be/Go4TDQSbeLc" target="_blank" rel="noopener" aria-label="Regarder la bande démo 2025 sur YouTube">
+        <img src="media/yt-demo.jpg" alt="" width="1280" height="720">
+        <span class="play" aria-hidden="true"></span>
+        <span class="player-cap"><strong>Bande démo 2025</strong><span class="yt">YouTube ↗</span></span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="profile">
+        <span class="label">Profil</span>
+        <div class="profile-body">
+          <p class="bio">Étudiant en Information-Communication, je passe du plateau de tournage à la console de mixage, puis au studio graphique, pour porter <span class="it">un message de bout en bout.</span></p>
+          <div class="skills">
+            <div class="skill">
+              <h3>Branding</h3>
+              <p>Identités, affiches, couvertures et supports imprimés, dans le respect d'une charte graphique.</p>
+              <div class="tools"><span class="tool">Id</span><span class="tool">Ai</span><span class="tool">Ps</span></div>
+            </div>
+            <div class="skill">
+              <h3>Création audiovisuelle</h3>
+              <p>Tournage, prise de son, montage et motion design, du format court à l'émission.</p>
+              <div class="tools"><span class="tool">Pr</span><span class="tool">Ae</span><span class="tool">Son</span></div>
+            </div>
+            <div class="skill">
+              <h3>Communication orale</h3>
+              <p>Présentation, chronique et animation à l'antenne, avec une expression claire et dynamique.</p>
+              <div class="tools"><span class="tool">Antenne</span><span class="tool">Pitch</span></div>
+            </div>
+          </div>
+          <div class="timeline" role="region" aria-label="Parcours de 2022 à 2026">
+            <div class="tl-inner">
+              <span></span>
+              <div class="ruler"><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span></div>
+              <span class="track-name">V1</span>
+              <div class="clip clip-v"><strong>Licence 1</strong><small>Fondamentaux de la communication, mineure audiovisuelle</small></div>
+              <div class="clip clip-v"><strong>Licence 2</strong><small>Approfondissement audiovisuel, projets de groupe</small></div>
+              <div class="clip clip-v" style="grid-column:4/6"><strong>Licence 3</strong><small>Création de Set Production : courts-métrages et émission</small></div>
+              <div class="clip clip-next"><strong>Master</strong><small>Sup de Com Montpellier · alternance Issanka</small></div>
+              <span class="track-name">A1</span>
+              <a href="#stage-1" style="grid-column:2/4" class="clip clip-a"><div class="wave"></div><small>Stage 1 · SE Shop Records, ingénieur du son →</small></a>
+              <a href="#stage-2" style="grid-column:4/6" class="clip clip-a"><div class="wave"></div><small>Stage 2 · USDH Handball, community manager →</small></a>
+              <a href="#issanka" style="grid-column:6/7" class="clip clip-a"><div class="wave"></div><small>Issanka · alternance communication →</small></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Sommaire</span>
+        <div>
+          <h2>Explorer <span class="it">le portfolio</span></h2>
+          <p>Chaque rubrique a sa propre page.</p>
+        </div>
+      </div>
+      <div class="index">
+        <a class="icard" href="#realisations"><img src="media/set-animation.jpg" alt="" loading="lazy"><span class="n">02</span><strong>Réalisations <span aria-hidden="true">→</span></strong><small>Vidéo et graphisme</small></a>
+        <a class="icard" href="#stage-1"><img src="media/stage1-d.jpg" alt="" loading="lazy"><span class="n">03</span><strong>Stage 1 <span aria-hidden="true">→</span></strong><small>SE Shop Records · ingénieur du son</small></a>
+        <a class="icard" href="#stage-2"><img src="media/stage2-c.jpg" alt="" loading="lazy"><span class="n">04</span><strong>Stage 2 <span aria-hidden="true">→</span></strong><small>USDH Handball · community manager</small></a>
+        <a class="icard" href="#stage-3"><img src="media/stage3-logo.jpg" alt="" loading="lazy" style="object-fit:contain;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px)"><span class="n">05</span><strong>Stage 3 <span aria-hidden="true">→</span></strong><small>HBC Thuir · community manager</small></a>
+        <a class="icard" href="#projets-pro"><img src="media/pro-ripert.jpg" alt="" loading="lazy" style="object-position:top"><span class="n">06</span><strong>Projets Pro <span aria-hidden="true">→</span></strong><small>Commandes réelles pour des clients</small></a>
+        <a class="icard" href="#projet-perso"><img src="media/perso-banniere.jpg" alt="" loading="lazy"><span class="n">07</span><strong>Projet Perso <span aria-hidden="true">→</span></strong><small>La musique et mes pochettes</small></a>
+        <a class="icard pending" href="#issanka"><span class="n">08</span><img src="media/issanka-logo.png" alt="" loading="lazy" style="position:absolute;top:50%;left:50%;right:auto;bottom:auto;transform:translate(-50%,-50%);width:75%;max-width:240px;height:auto;object-fit:contain;background:#fff;border-radius:8px;padding:16px 20px"><strong>Issanka <span aria-hidden="true">→</span></strong><small>Alternance communication · à venir</small></a>
+        <a class="icard" href="#contact"><img src="media/contact-portrait.jpg" alt="" loading="lazy" style="object-position:top"><span class="n">09</span><strong>Contact <span aria-hidden="true">→</span></strong><small>E-mail, LinkedIn, CV</small></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ 02 · RÉALISATIONS ============ -->
+<div class="page" id="p-realisations" data-title="Réalisations" hidden>
+  <header class="phead">
+    <div class="wrap">
+      <div>
+        <span class="label">02 / 09 · Réalisations</span>
+        <h1 tabindex="-1">Ce que j'ai <span class="it">tourné, monté</span> et dessiné</h1>
+        <p class="intro">Projets de cours et de l'agence fictive <b>Set Production</b>. Chaque vignette indique le logiciel principal utilisé.</p>
+      </div>
+      <span class="pnum" aria-hidden="true">02</span>
+    </div>
+  </header>
+  <section>
+    <div class="wrap">
+      <div class="sub"><h2 style="font-size:1.6rem">Vidéo</h2><span class="label">5 projets</span></div>
+      <div class="vgrid">
+        <a class="vcard" href="https://youtu.be/UYfM7MRttOI" target="_blank" rel="noopener" aria-label="Regarder Set Production sur YouTube">
+          <img src="media/set-production.jpg" alt="" width="1280" height="720" loading="lazy">
+          <span class="vtags"><span class="tool">Pr</span><span class="mini-play" aria-hidden="true"></span></span>
+          <span class="vcap"><strong>Set Production</strong><small>Agence audiovisuelle fictive : émission, court-métrage, captations. Ingénieur du son sur les tournages.</small></span>
+        </a>
+        <a class="vcard" href="https://youtu.be/J1hnvEn8w40" target="_blank" rel="noopener" aria-label="Regarder Habillage Set Prod sur YouTube">
+          <img src="media/set-animation.jpg" alt="" width="1280" height="720" loading="lazy">
+          <span class="vtags"><span class="tool">Ae</span><span class="mini-play" aria-hidden="true"></span></span>
+          <span class="vcap"><strong>Habillage Set Prod</strong><small>Animation du logo de l'agence.</small></span>
+        </a>
+        <div class="reel-wrap">
+          <div class="reel">
+            <video controls playsinline preload="metadata" poster="media/tous-en-rythme.jpg" aria-label="Reel de l'événement Tous en Rythme">
+              <source src="media/tous-en-rythme.mp4" type="video/mp4">
+            </video>
+            <div class="reel-cap"><span class="tool">Pr</span><span class="yt">Reel</span></div>
+          </div>
+          <div class="reel-text"><strong>Tous en Rythme</strong><p>Production et captation de l'événement. Régisseur son aux côtés de la réalisatrice.</p></div>
+        </div>
+        <a class="vcard" href="https://www.youtube.com/watch?v=pdb1blBSn-U&amp;t=12s" target="_blank" rel="noopener" aria-label="Regarder Voyage et Vous sur YouTube">
+          <img src="media/voyage-vous.jpg" alt="" width="1280" height="720" loading="lazy">
+          <span class="vtags"><span class="tool">TV</span><span class="mini-play" aria-hidden="true"></span></span>
+          <span class="vcap"><strong>Voyage &amp; Vous</strong><small>Émission : écriture et enregistrement d'une chronique, jeu ludo-éducatif.</small></span>
+        </a>
+        <a class="vcard" href="https://www.youtube.com/watch?v=qTxT5HvOmyM" target="_blank" rel="noopener" aria-label="Regarder Top Of The Pop sur YouTube">
+          <img src="media/top-of-the-pop.jpg" alt="" width="1280" height="720" loading="lazy">
+          <span class="vtags"><span class="tool">TV</span><span class="mini-play" aria-hidden="true"></span></span>
+          <span class="vcap"><strong>Top Of The Pop</strong><small>Show de divertissement musical en plateau.</small></span>
+        </a>
+      </div>
+
+      <div class="sub gap"><h2 style="font-size:1.6rem">Graphisme</h2><span class="label">Cliquer pour agrandir</span></div>
+      <div class="ggrid">
+        <div class="gitem">
+          <button class="zoom r45" data-cap="Couverture fictive ID Magazine · Photoshop"><img src="media/id-magazine.jpg" alt="Couverture fictive du magazine ID, style Pop Art" loading="lazy"></button>
+          <div class="gmeta"><div><h3>Couverture ID Magazine</h3><p>Couverture fictive dans un style Pop Art.</p></div><span class="tool">Ps</span></div>
+        </div>
+        <div class="gitem">
+          <button class="zoom r45 contain bg-cards" data-cap="Jeu de cartes PMU · Illustrator"><img src="media/jeu-cartes.jpg" alt="Cartes illustrées d'un jeu de cartes PMU" loading="lazy"></button>
+          <div class="gmeta"><div><h3>Jeu de cartes</h3><p>Conception graphique d'un jeu complet.</p></div><span class="tool">Ai</span></div>
+        </div>
+        <div class="gitem">
+          <button class="zoom r45" data-cap="Galerie musicale · Photoshop"><img src="media/galerie-musicale.jpg" alt="Galerie néon aux couleurs d'un artiste musical" loading="lazy"></button>
+          <div class="gmeta"><div><h3>Galerie musicale</h3><p>Une galerie néon imaginaire autour de ZLO.</p></div><span class="tool">Ps</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ 03 · STAGE 1 ============ -->
+<div class="page" id="p-stage-1" data-title="Stage 1 · SE Shop Records" hidden>
+  <header class="phead">
+    <div class="wrap">
+      <div>
+        <span class="label"><span class="rec"><i></i></span>03 / 09 · Stage 1 · Studio de musique</span>
+        <h1 tabindex="-1">Stage <span class="it">ingénieur du son</span></h1>
+        <p class="intro">Au studio <b>SE Shop Records</b>, aux côtés de mon maître de stage, d'un autre stagiaire et des artistes. Une période où j'ai appris les mécanismes de l'enregistrement, du mixage et du mastering, en observant le processus créatif et technique derrière une production musicale.</p>
+      </div>
+      <span class="pnum" aria-hidden="true">03</span>
+    </div>
+  </header>
+  <section>
+    <div class="wrap">
+      <div class="fiche">
+        <div><span class="label">Structure</span><strong>SE Shop Records</strong></div>
+        <div><span class="label">Poste</span><strong>Stagiaire ingénieur du son</strong></div>
+        <div><span class="label">Domaine</span><strong>Studio d'enregistrement</strong></div>
+        <div><span class="label">Compétences</span><strong>Enregistrement · Mix · Master</strong></div>
+      </div>
+
+      <article class="mission">
+        <div class="mission-text">
+          <span class="mnum">MISSION 01</span>
+          <h2>Mise en marche des tables de mixage et cartes son</h2>
+          <p>Apprendre la procédure de démarrage, vérifier les branchements et régler les paramètres. <b>L'ordre compte :</b> on allume les cartes son avant les enceintes pour éviter tout dysfonctionnement, puis on relie les différents appareils étape par étape.</p>
+        </div>
+        <button class="zoom r43" data-cap="Préamplis et interfaces du studio"><img src="media/stage1-b.jpg" alt="Rack de préamplificateurs" loading="lazy"></button>
+      </article>
+
+      <article class="mission flip">
+        <div class="mission-text">
+          <span class="mnum">MISSION 02</span>
+          <h2>Mixage et mastering</h2>
+          <p>Une activité récurrente qui demande de l'innovation et de l'originalité. J'ai commencé par <b>nettoyer les enregistrements</b> (silences, bruits parasites), avant d'apprendre différentes techniques d'effets sur les voix.</p>
+        </div>
+        <button class="zoom r43" data-cap="Poste de mixage"><img src="media/stage1-a.jpg" alt="Poste de mixage avec écrans et enceintes" loading="lazy"></button>
+      </article>
+
+      <article class="mission">
+        <div class="mission-text">
+          <span class="mnum">MISSION 03</span>
+          <h2>Enregistrement musical</h2>
+          <p>Pour la première fois, j'ai enregistré un nouvel artiste. Une occasion idéale d'échange et de partage de connaissances, qui s'est très bien déroulée.</p>
+          <p class="quote">J'ai enregistré un nouvel artiste pour la première fois, en travaillant avec lui pour servir sa vision.</p>
+        </div>
+        <button class="zoom r43" data-cap="Cabine d'enregistrement"><img src="media/stage1-c.jpg" alt="Micro de studio avec filtre anti-pop" loading="lazy"></button>
+      </article>
+
+      <article class="mission flip">
+        <div class="mission-text">
+          <span class="mnum">MISSION 04</span>
+          <h2>Promotion et suivi d'artistes</h2>
+          <p>Être aligné avec le rendu souhaité est fondamental. À plusieurs reprises, il a fallu <b>reprendre un mix ou réorganiser un enregistrement</b> pour répondre aux attentes des artistes.</p>
+        </div>
+        <button class="zoom r43" data-cap="Régie du studio SE Shop Records"><img src="media/stage1-d.jpg" alt="Régie du studio avec console de mixage" loading="lazy"></button>
+      </article>
+    </div>
+  </section>
+</div>
+
+<!-- ============ 04 · STAGE 2 ============ -->
+<div class="page" id="p-stage-2" data-title="Stage 2 · USDH Handball" hidden>
+  <header class="phead">
+    <div class="wrap">
+      <div>
+        <span class="label"><span class="rec"><i></i></span>04 / 09 · Stage 2 · Club sportif</span>
+        <h1 tabindex="-1">Stage <span class="it">community manager</span></h1>
+        <p class="intro">Dans mon club de handball, l'<b>USDH</b>, j'ai approfondi mes connaissances tout en consolidant mes compétences en audiovisuel et en graphisme, avec une production régulière calée sur le calendrier des matchs.</p>
+      </div>
+      <span class="pnum" aria-hidden="true">04</span>
+    </div>
+  </header>
+  <section>
+    <div class="wrap">
+      <div class="fiche">
+        <div><span class="label">Structure</span><strong>USDH Handball</strong></div>
+        <div><span class="label">Poste</span><strong>Community manager</strong></div>
+        <div><span class="label">Domaine</span><strong>Club sportif</strong></div>
+        <div><span class="label">Outils</span><strong>Premiere · After Effects · Photoshop</strong></div>
+      </div>
+
+      <article class="mission">
+        <div class="mission-text">
+          <span class="mnum">MISSION 01</span>
+          <h2>Réalisation et montage d'une vidéo court format</h2>
+          <p>Une gestion complète du projet, <b>de la configuration des lumières et des micros jusqu'à la création des sous-titres</b> finaux, avant publication d'un reel sur Instagram.</p>
+        </div>
+        <a class="player" href="https://youtube.com/shorts/I3ilyE_Rf2Q" target="_blank" rel="noopener" style="aspect-ratio:9/16;max-width:300px;margin-inline:auto" aria-label="Regarder sur YouTube : interview sous-titrée">
+          <img src="media/stage2-b.jpg" alt="" loading="lazy">
+          <span class="play" aria-hidden="true"></span>
+        </a>
+      </article>
+
+      <article class="mission flip">
+        <div class="mission-text">
+          <span class="mnum">MISSION 02</span>
+          <h2>Création d'affiches de match et d'événements</h2>
+          <p>Une part importante de mon travail : développer des concepts créatifs puis les concrétiser, <b>en répondant aux attentes et aux directives</b> de mon maître de stage.</p>
+        </div>
+        <div class="duo">
+          <button class="zoom r57" data-cap="Affiche du documentaire « La Montée »"><img src="media/stage2-a.jpg" alt="Affiche du documentaire La Montée" loading="lazy"></button>
+          <button class="zoom r57" data-cap="Affiche Game Day #21"><img src="media/stage2-d.jpg" alt="Affiche Game Day numéro 21" loading="lazy" style="object-position:top"></button>
+        </div>
+      </article>
+
+      <article class="mission">
+        <div class="mission-text">
+          <span class="mnum">MISSION 03</span>
+          <h2>Animation de logo</h2>
+          <p>J'ai mis à profit mes compétences sur <b>After Effects</b> pour animer le logo du club, apportant une dimension dynamique et professionnelle à son identité visuelle.</p>
+        </div>
+        <div class="r43 bg-dark contain" style="border-radius:10px;overflow:hidden">
+          <video style="width:100%;height:100%;object-fit:contain" controls muted loop playsinline preload="metadata" poster="media/stage2-c.jpg" aria-label="Animation logo USDH v2 · After Effects">
+            <source src="media/stage2-c.mp4" type="video/mp4">
+          </video>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
+
+<!-- ============ 05 · STAGE 3 ============ -->
+<div class="page" id="p-stage-3" data-title="Stage 3 · HBC Thuir" hidden>
+  <header class="phead">
+    <div class="wrap">
+      <div>
+        <span class="label"><span class="rec"><i></i></span>05 / 09 · Stage 3 · Club sportif</span>
+        <h1 tabindex="-1">Stage <span class="it">community manager</span></h1>
+        <p class="intro">À l'été 2025, j'ai rejoint le <b>HBC Thuir</b> pour mon dernier stage universitaire, avec un périmètre élargi : organisation d'événements, prospection et création graphique. Une saison marquante pour le club, sacré <b>Champion d'Occitanie 2024-2025</b> pour deux de ses équipes.</p>
+      </div>
+      <span class="pnum" aria-hidden="true">05</span>
+    </div>
+  </header>
+  <section>
+    <div class="wrap">
+      <div class="fiche">
+        <div><span class="label">Structure</span><strong>HBC Thuir</strong></div>
+        <div><span class="label">Poste</span><strong>Community manager</strong></div>
+        <div><span class="label">Domaine</span><strong>Club sportif</strong></div>
+        <div><span class="label">Période</span><strong>Été 2025</strong></div>
+      </div>
+
+      <article class="mission">
+        <div class="mission-text">
+          <span class="mnum">MISSION 01</span>
+          <h2>Communication autour des rencontres</h2>
+          <p>Une affiche par match, pour chaque catégorie du club : annonces de rencontre, résultats et temps forts de saison, <b>déclinés sur plusieurs équipes en parallèle</b>.</p>
+        </div>
+        <div class="duo">
+          <button class="zoom r45" data-cap="Dernier match Nationale 1 · Thuir vs La Motte"><img src="media/stage3-a.jpg" alt="Affiche du dernier match de Nationale 1, Thuir contre La Motte" loading="lazy"></button>
+          <button class="zoom r45" data-cap="Finales Occitanie · Thuir vs Muret"><img src="media/stage3-f.jpg" alt="Affiche des finales Occitanie, Thuir contre Muret et Thuir contre MHB2" loading="lazy"></button>
+        </div>
+      </article>
+
+      <article class="mission flip">
+        <div class="mission-text">
+          <span class="mnum">MISSION 02</span>
+          <h2>Prospection : accueillir de nouveaux joueurs</h2>
+          <p>Concevoir les visuels de bienvenue pour les recrues, <b>en valorisant leur profil</b> (poste, gabarit, ancien club) pour donner le ton dès leur arrivée au club.</p>
+        </div>
+        <button class="zoom r45" data-cap="Affiche de bienvenue · Nathan Torres"><img src="media/stage3-b.jpg" alt="Affiche de bienvenue pour le joueur Nathan Torres" loading="lazy"></button>
+      </article>
+
+      <article class="mission">
+        <div class="mission-text">
+          <span class="mnum">MISSION 03</span>
+          <h2>Organisation d'un événement de fin de saison</h2>
+          <p>Du visuel de communication jusqu'au jour J : un tournoi <b>ouvert du mini-hand aux seniors</b>, avec ses propres contraintes d'organisation et de timing.</p>
+        </div>
+        <button class="zoom r45" data-cap="Tournoi de fin d'année · gymnase Jean-Baptiste Rosello"><img src="media/stage3-c.jpg" alt="Affiche du tournoi de fin d'année, du mini-hand aux seniors" loading="lazy"></button>
+      </article>
+
+      <article class="mission flip">
+        <div class="mission-text">
+          <span class="mnum">MISSION 04</span>
+          <h2>Mettre en image une saison de champions</h2>
+          <p>Deux équipes sacrées <b>Champion d'Occitanie 2024-2025</b>, une série chez les jeunes terminée <b>5 victoires, 0 défaite</b> : autant de résultats à mettre en valeur pour le club et ses partenaires.</p>
+        </div>
+        <div class="duo">
+          <button class="zoom r45" data-cap="100% victoires · Champion Occitanie 2024-2025"><img src="media/stage3-e.jpg" alt="Affiche 100% victoires, champion Occitanie 2024-2025" loading="lazy"></button>
+          <button class="zoom r57" data-cap="Invincibles · 5 victoires, 0 défaite"><img src="media/stage3-d.jpg" alt="Affiche invincibles, 5 victoires 0 défaite" loading="lazy"></button>
+        </div>
+      </article>
+
+      <p class="quote">Gérer plusieurs supports, plusieurs équipes et plusieurs échéances en parallèle m'a beaucoup appris sur l'organisation et la gestion de projet.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ============ 06 · PROJETS PRO ============ -->
+<div class="page" id="p-projets-pro" data-title="Projets Pro" hidden>
+  <header class="phead">
+    <div class="wrap">
+      <div>
+        <span class="label">06 / 09 · Projets Pro</span>
+        <h1 tabindex="-1">Des commandes <span class="it">réelles</span></h1>
+        <p class="intro">Des supports livrés à des clients, <b>avec leur cahier des charges et leur charte graphique</b>. Cliquez sur un visuel pour l'agrandir.</p>
+      </div>
+      <span class="pnum" aria-hidden="true">06</span>
+    </div>
+  </header>
+  <section>
+    <div class="wrap">
+      <div class="wall">
+        <div class="poster">
+          <button class="zoom r57" data-cap="Affiche Matchday · USDH"><img src="media/pro-test.jpg" alt="Affiche Matchday de l'USDH" loading="lazy"></button>
+          <div><span class="client">USDH</span><h3>Affiches de match</h3><p>Une affiche par week-end de compétition, au sein de la commission communication.</p></div>
+        </div>
+        <div class="poster">
+          <button class="zoom r57" data-cap="Affiche Event Forty-Nine"><img src="media/pro-affiche-jet.jpg" alt="Affiche de l'Event Forty-Nine, samedi 24 juin" loading="lazy"></button>
+          <div><span class="client">Forty-Nine</span><h3>Affiche d'événement musical</h3><p>Promotion des artistes du show, avec mon tuteur de stage.</p></div>
+        </div>
+        <div class="poster">
+          <button class="zoom r57" data-cap="Catalogue Arbo 2023 · Ripert"><img src="media/pro-ripert.jpg" alt="Couverture du catalogue Arbo 2023 de Ripert" loading="lazy"></button>
+          <div><span class="client">Ripert · 2023</span><h3>Couverture de catalogue</h3><p>Catalogue arbo 2023, dans le respect de la charte de l'entreprise.</p></div>
+        </div>
+        <div class="poster">
+          <button class="zoom r57 contain bg-dark" data-cap="QR code « Sao Paulo »"><img src="media/pro-qr.jpg" alt="QR code illustré pour un single" loading="lazy"></button>
+          <div><span class="client">Single</span><h3>QR codes de diffusion</h3><p>Des QR codes illustrés pour attirer l'œil et faire écouter un single.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Méthode</span>
+        <div><h2>Travailler <span class="it">pour un client</span></h2></div>
+      </div>
+      <div class="approach">
+        <div><span class="mnum">01</span><h3>Comprendre la demande</h3><p>Lire le cahier des charges, cerner le public et l'usage du support.</p></div>
+        <div><span class="mnum">02</span><h3>Respecter la charte</h3><p>Couleurs, typographies et logos de la structure, sans perdre en impact.</p></div>
+        <div><span class="mnum">03</span><h3>Livrer dans les temps</h3><p>Des allers-retours avec le client jusqu'au fichier final, prêt à diffuser.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ 07 · PROJET PERSO ============ -->
+<div class="page" id="p-projet-perso" data-title="Projet Perso" hidden>
+  <section class="music" style="padding-top:clamp(56px,9vw,120px)">
+    <div class="music-banner" style="background-image:url('media/perso-banniere.jpg')" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="music-top">
+        <div>
+          <span class="label">07 / 09 · Projet Perso</span>
+          <h2 tabindex="-1" style="margin-top:14px;font-size:clamp(2.6rem,7vw,5.2rem);letter-spacing:-.045em;line-height:.92">La musique, <span class="it">depuis toujours</span></h2>
+        </div>
+        <p class="big">Chorale, premier rôle dans une comédie musicale, puis mes propres titres. Avec un ami d'enfance, <b>j'ai sorti deux singles</b> et un EP est en préparation. Je conçois aussi les pochettes.</p>
+      </div>
+
+      <div class="covers">
+        <div class="cover-item">
+          <button class="zoom r11" data-cap="FAINEANT_purc · ZLO"><img src="media/perso-cover-faineant.jpg" alt="Pochette du single FAINEANT_purc de ZLO" loading="lazy"></button>
+          <div><small>Dernier single · 2026</small><br><strong>FAINEANT_purc · ZLO</strong></div>
+          <a class="spotify" href="https://open.spotify.com/intl-fr/artist/1Tl7DPNtfW27jMFtACqbm6" target="_blank" rel="noopener">▶ Écouter sur Spotify</a>
+        </div>
+        <div class="cover-item">
+          <button class="zoom r11" data-cap="Vas-y Viens · ZLO"><img src="media/perso-cover-vasy.jpg" alt="Pochette du single Vas-y Viens de ZLO" loading="lazy"></button>
+          <div><small>Single · 2025</small><br><strong>Vas-y Viens · ZLO</strong></div>
+          <a class="spotify" href="https://open.spotify.com/intl-fr/track/63cuUSq0FSSN65IijQo8j0" target="_blank" rel="noopener">▶ Écouter sur Spotify</a>
+        </div>
+        <div class="cover-item">
+          <button class="zoom r11" data-cap="Génération de Maudits · ZLO"><img src="media/perso-peinture.jpg" alt="Pochette du single Génération de Maudits de ZLO : deux silhouettes face à un incendie" loading="lazy"></button>
+          <div><small>Single · 2024</small><br><strong>Génération de Maudits · ZLO</strong></div>
+          <a class="spotify" href="https://open.spotify.com/intl-fr/artist/1Tl7DPNtfW27jMFtACqbm6" target="_blank" rel="noopener">▶ Écouter sur Spotify</a>
+        </div>
+        <div class="cover-item">
+          <button class="zoom r11" data-cap="SAO PAULO · ZLO"><img src="media/perso-cover.jpg" alt="Pochette du single SAO PAULO de ZLO : une barque sur un lac bleu nuit" loading="lazy"></button>
+          <div><small>Single · 2023</small><br><strong>SAO PAULO · ZLO</strong></div>
+          <a class="spotify" href="https://open.spotify.com/intl-fr/artist/1Tl7DPNtfW27jMFtACqbm6" target="_blank" rel="noopener">▶ Écouter sur Spotify</a>
+        </div>
+      </div>
+
+      <ol class="chain">
+        <li><h3>Instrumentale</h3><p>Trouver la prod qui colle à la vision du titre.</p></li>
+        <li><h3>Topline et voix</h3><p>Écrire la mélodie et les paroles, puis enregistrer.</p></li>
+        <li><h3>Mix et master</h3><p>Équilibrer chaque élément et finaliser le son.</p></li>
+        <li><h3>Diffusion</h3><p>Publier sur les plateformes avec une stratégie de promotion.</p></li>
+      </ol>
+    </div>
+  </section>
+</div>
+
+<!-- ============ 08 · ISSANKA ============ -->
+<div class="page" id="p-issanka" data-title="Issanka" hidden>
+  <header class="phead">
+    <div class="wrap">
+      <div>
+        <span class="label">08 / 09 · Issanka</span>
+        <h1 tabindex="-1">Alternance <span class="it">en cours</span></h1>
+        <p class="intro">Communication chez <b>Issanka</b>, agence basée à Montpellier, dans le cadre de mon Master à Sup de Com. Les premiers projets arrivent bientôt sur cette page.</p>
+      </div>
+      <span class="pnum" aria-hidden="true">08</span>
+    </div>
+  </header>
+  <section style="padding-block:clamp(96px,14vw,180px)">
+    <div class="wrap" style="text-align:center;display:grid;justify-items:center;gap:18px">
+      <span class="rec" style="font-size:1.05rem"><i></i>EN TOURNAGE</span>
+      <h2 style="max-width:20ch">Merci de patienter, <span class="it">plus d'infos bientôt</span></h2>
+      <p style="color:var(--muted);max-width:48ch">Les projets réalisés avec Issanka seront publiés ici au fil de l'alternance.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ============ 09 · CONTACT ============ -->
+<div class="page" id="p-contact" data-title="Contact" hidden>
+  <section style="padding-block:clamp(72px,12vw,160px)">
+    <div class="wrap contact">
+      <div>
+        <span class="label">09 / 09 · Contact</span>
+        <h2 tabindex="-1" style="margin-top:14px">Un projet vidéo, son ou graphique ? <span class="it">Parlons-en.</span></h2>
+        <p class="avail">Basé entre Angers et Montpellier. Je réponds par e-mail ou sur LinkedIn.</p>
+      </div>
+      <div class="links">
+        <a href="mailto:antoninmarchandpro@gmail.com"><span><small>E-mail</small>antoninmarchandpro@gmail.com</span><span aria-hidden="true">→</span></a>
+        <a href="tel:+33626250657"><span><small>Téléphone</small>06 26 25 06 57</span><span aria-hidden="true">→</span></a>
+        <a href="https://www.linkedin.com/in/antonin-marchand-2040242a2/" target="_blank" rel="noopener"><span><small>LinkedIn</small>Antonin Marchand</span><span aria-hidden="true">↗</span></a>
+        <a href="https://open.spotify.com/intl-fr/artist/1Tl7DPNtfW27jMFtACqbm6" target="_blank" rel="noopener"><span><small>Spotify</small>Mes titres</span><span aria-hidden="true">↗</span></a>
+        <a href="https://3e42d521-a443-4cc1-8403-c148299855ea.filesusr.com/ugd/ef4ac2_e7b2bee160194d628dfd1d09dc1407d8.pdf" target="_blank" rel="noopener"><span><small>CV</small>Télécharger en PDF</span><span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<nav class="pager" id="pager" aria-label="Page précédente et suivante"><div class="wrap" id="pager-in"></div></nav>
+
+<footer>
+  <div class="wrap"><span>© 2026 Antonin Marchand · <a href="mailto:antoninmarchandpro@gmail.com">antoninmarchandpro@gmail.com</a></span><span class="tc">FIN · 25 i/s</span></div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Visionneuse d'image">
+  <button class="lb-close" id="lb-close" aria-label="Fermer">×</button>
+  <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+</dialog>
+
+<script>
+(function(){
+  /* ---------- navigation entre pages ---------- */
+  var pages=[].slice.call(document.querySelectorAll('.page'));
+  var ids=pages.map(function(p){return p.id.slice(2)});
+  var navLinks=[].slice.call(document.querySelectorAll('#nav a'));
+  var bar=document.getElementById('bar'),menuBtn=document.getElementById('menu-btn');
+  var stagesBtn=document.getElementById('stages-btn'),stagesDrop=document.getElementById('stages-drop');
+  var pagerIn=document.getElementById('pager-in');
+  var first=true;
+
+  function label(p){return p.dataset.title.split(' · ')[0]}
+
+  function route(){
+    var id=decodeURIComponent(location.hash.slice(1));
+    var i=ids.indexOf(id); if(i<0) i=0;
+    var cur=pages[i];
+    pages.forEach(function(p){
+      var on=p===cur; p.hidden=!on;
+      if(!on) p.querySelectorAll('video').forEach(function(v){try{v.pause()}catch(e){}});
+    });
+    navLinks.forEach(function(a){
+      if(a.getAttribute('href')==='#'+ids[i]) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+    });
+    if(stagesBtn){
+      var inStages=ids[i]==='stage-1'||ids[i]==='stage-2'||ids[i]==='stage-3';
+      stagesBtn.classList.toggle('active',inStages);
+    }
+    document.title=(i===0?'Antonin Marchand':cur.dataset.title+' · Antonin Marchand');
+    if(!first) tabSound();
+
+    // précédent / suivant
+    var html='';
+    if(i>0) html+='<a class="prev" href="#'+ids[i-1]+'"><span class="label">← Page précédente</span><strong>'+label(pages[i-1])+'</strong></a>';
+    if(i<pages.length-1) html+='<a class="next" href="#'+ids[i+1]+'"><span class="label">Page suivante →</span><strong>'+label(pages[i+1])+'</strong></a>';
+    pagerIn.innerHTML=html;
+
+    closeMenu();
+    window.scrollTo(0,0);
+    if(!first){var h=cur.querySelector('[tabindex="-1"]'); if(h) h.focus({preventScroll:true});}
+    first=false;
+  }
+
+  function closeMenu(){
+    bar.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');
+    if(stagesDrop){stagesDrop.classList.remove('open');stagesBtn.setAttribute('aria-expanded','false')}
+  }
+  menuBtn.addEventListener('click',function(){
+    var o=bar.classList.toggle('open');menuBtn.setAttribute('aria-expanded',o?'true':'false');
+  });
+  if(stagesBtn){
+    stagesBtn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var o=stagesDrop.classList.toggle('open');stagesBtn.setAttribute('aria-expanded',o?'true':'false');
+    });
+  }
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu()});
+  document.addEventListener('click',function(e){
+    if(!bar.contains(e.target))closeMenu();
+    else if(stagesDrop&&!stagesDrop.contains(e.target))stagesDrop.classList.remove('open'),stagesBtn.setAttribute('aria-expanded','false');
+  });
+
+  window.addEventListener('hashchange',route);
+  route();
+
+  /* ---------- son au clic sur un onglet ---------- */
+  var actx;
+  function tabSound(){
+    try{
+      actx=actx||new (window.AudioContext||window.webkitAudioContext)();
+      if(actx.state==='suspended')actx.resume();
+      var t=actx.currentTime;
+      var osc=actx.createOscillator(),gain=actx.createGain();
+      osc.type='sine';
+      osc.frequency.setValueAtTime(720,t);
+      osc.frequency.exponentialRampToValueAtTime(1400,t+0.05);
+      gain.gain.setValueAtTime(.0001,t);
+      gain.gain.exponentialRampToValueAtTime(.09,t+.006);
+      gain.gain.exponentialRampToValueAtTime(.0001,t+.11);
+      osc.connect(gain).connect(actx.destination);
+      osc.start(t);osc.stop(t+.12);
+    }catch(e){}
+  }
+
+  /* ---------- timecode 25 i/s ---------- */
+  var el=document.getElementById('tc');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function pad(n){return (n<10?'0':'')+n}
+  if(el){
+    if(reduce){el.textContent='00:02:14:08'}
+    else{
+      var start=performance.now();
+      (function tick(now){
+        var f=Math.floor((now-start)/40),s=Math.floor(f/25);
+        el.textContent=pad(Math.floor(s/3600))+':'+pad(Math.floor(s/60)%60)+':'+pad(s%60)+':'+pad(f%25);
+        requestAnimationFrame(tick);
+      })(start);
+    }
+  }
+
+  /* ---------- visionneuse ---------- */
+  var lb=document.getElementById('lb'),img=document.getElementById('lb-img'),cap=document.getElementById('lb-cap');
+  document.querySelectorAll('button.zoom').forEach(function(b){
+    b.addEventListener('click',function(){
+      var i=b.querySelector('img');
+      img.src=i.getAttribute('src');img.alt=i.alt;cap.textContent=b.dataset.cap||i.alt;
+      if(lb.showModal){lb.showModal()}else{lb.setAttribute('open','')}
+    });
+  });
+  document.getElementById('lb-close').addEventListener('click',function(){lb.close()});
+  lb.addEventListener('click',function(e){if(e.target===lb)lb.close()});
+})();
+</script>
+
+</body></html>
