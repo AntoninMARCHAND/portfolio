@@ -51,12 +51,6 @@ img,video{max-width:100%;display:block}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 .wrap{max-width:1200px;margin-inline:auto;padding-inline:var(--gut)}
 
-/* fond animé */
-.bg-paths{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;color:var(--ink)}
-.bg-paths svg{width:100%;height:100%;display:block}
-.bg-paths path{fill:none;stroke:currentColor;stroke-dasharray:22 78;animation:bgflow linear infinite}
-@keyframes bgflow{from{stroke-dashoffset:100}to{stroke-dashoffset:-100}}
-@media (prefers-reduced-motion:reduce){.bg-paths path{animation:none}}
 [tabindex="-1"]:focus{outline:none}
 
 .label{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
@@ -123,12 +117,15 @@ p{margin:0}
 .chip{font-family:var(--mono);font-size:.75rem;padding:5px 10px;border:1px solid var(--cine-line);border-radius:999px;color:var(--cine-muted)}
 .chip b{color:var(--cine-ink);font-weight:500}
 .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.btn{position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;min-width:11em;justify-content:center;font-weight:600;font-size:.9375rem;text-decoration:none;padding:12px 22px;border-radius:8px;border:1px solid currentColor;transition:transform .15s ease}
+.btn{position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;min-width:11em;justify-content:center;font-weight:600;font-size:.9375rem;text-decoration:none;padding:12px 22px 12px 36px;border-radius:8px;border:1px solid currentColor;transition:transform .15s ease}
+.btn-sm{min-width:auto;padding:9px 20px 9px 30px;font-size:.8125rem}
 .btn:hover{transform:translateY(-1px)}
 .btn-light{background:var(--cine-ink);color:var(--cine);border-color:var(--cine-ink)}
 .btn-line{color:var(--cine-ink);border-color:var(--cine-line)}
-.btn::before{content:"";position:absolute;left:22px;top:50%;width:10px;height:10px;margin-top:-5px;border-radius:50%;background:var(--accent);transform:scale(1);transition:transform .5s cubic-bezier(.16,1,.3,1);z-index:0}
-.btn:hover::before{transform:scale(30)}
+.btn::before{content:"";position:absolute;left:14px;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:var(--accent);transform:scale(1);transition:transform .5s cubic-bezier(.16,1,.3,1);z-index:0}
+.btn:hover::before{transform:scale(34)}
+.btn-sm::before{left:12px;width:6px;height:6px;margin-top:-3px}
+.btn-sm:hover::before{transform:scale(26)}
 .btn-face{position:relative;z-index:2;display:inline-flex;align-items:center;gap:8px;transition:transform .35s cubic-bezier(.16,1,.3,1),opacity .3s ease}
 .btn-face-hover{position:absolute;inset:0;display:inline-flex;align-items:center;justify-content:center;gap:8px;color:#fff;transform:translateX(115%);opacity:0}
 .btn:hover .btn-face:not(.btn-face-hover){transform:translateX(-115%);opacity:0}
@@ -241,7 +238,7 @@ a.clip-a:hover{border-color:var(--accent);border-style:solid}
 .gmeta{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
 
 /* bento réalisations */
-.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:130px;grid-auto-flow:dense;gap:14px}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,130px);gap:14px}
 .bento-item{all:unset;position:relative;display:block;cursor:pointer;border-radius:12px;overflow:hidden;background:#000;color:#fff;isolation:isolate}
 .bento-item img,.bento-item video{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .bento-item:hover img,.bento-item:hover video{transform:scale(1.04)}
@@ -302,21 +299,19 @@ dialog.bmodal::backdrop{background:rgba(5,9,18,.9);backdrop-filter:blur(4px)}
 .music-top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,64px);align-items:end;margin-bottom:clamp(32px,5vw,56px)}
 .music-top .big{font-size:1.15rem;color:var(--cine-muted);max-width:48ch}
 .music-top .big b{color:var(--cine-ink);font-weight:500}
-.corridor{position:relative;overflow:hidden;border-radius:14px;height:min(46vh,380px);background:var(--cine-2);border:1px solid var(--cine-line)}
-.corridor-card{position:absolute;overflow:hidden;box-shadow:0 10px 30px -12px rgba(0,0,0,.6)}
+.corridor{position:relative;overflow:hidden;height:min(46vh,380px)}
+.corridor-card{position:absolute;overflow:hidden;border-radius:8px;box-shadow:0 10px 30px -12px rgba(0,0,0,.6);cursor:pointer}
 .corridor-card img{width:100%;height:100%;object-fit:cover;display:block}
-.corridor-caption{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;gap:6px;padding:22px;pointer-events:none;background:linear-gradient(to top,var(--cine-2) 12%,transparent 62%)}
+.corridor-caption{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;gap:6px;padding:22px;pointer-events:none;background:linear-gradient(to top,var(--cine) 25%,transparent 70%)}
 .corridor-caption .label{color:var(--cine-muted)}
 .corridor-caption h3{font-family:var(--display);font-weight:700;font-size:clamp(1.3rem,3vw,1.9rem);color:var(--cine-ink);letter-spacing:-.02em}
-.discog{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:clamp(20px,3vw,28px)}
+.discog{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:clamp(20px,3vw,28px)}
 .discog a{display:flex;align-items:center;gap:10px;padding:8px;border-radius:10px;background:var(--cine-2);border:1px solid var(--cine-line);text-decoration:none;transition:border-color .15s ease}
 .discog a:hover{border-color:var(--cine-accent)}
 .discog img{width:42px;height:42px;border-radius:6px;object-fit:cover;flex:none}
 .discog strong{font-size:.8125rem;line-height:1.25;color:var(--cine-ink);display:block}
 .discog small{font-family:var(--mono);font-size:.68rem;color:var(--cine-muted)}
-.discog-all{grid-column:1/-1;justify-content:space-between;color:var(--cine-ink);font-size:.875rem;font-weight:600}
-.discog-all span:last-child{font-family:var(--mono);transition:transform .15s ease}
-.discog-all:hover span:last-child{transform:translateX(4px)}
+.discog-all-wrap{display:flex;justify-content:center;margin-top:clamp(28px,4vw,40px)}
 .chain{list-style:none;margin:clamp(40px,6vw,64px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--cine-line);border:1px solid var(--cine-line);border-radius:12px;overflow:hidden;counter-reset:step}
 .chain li{background:var(--cine-2);padding:22px;counter-increment:step;display:flex;flex-direction:column;gap:8px}
 .chain li::before{content:counter(step,decimal-leading-zero);font-family:var(--mono);font-size:.8rem;color:var(--cine-accent)}
@@ -374,13 +369,15 @@ dialog.lb::backdrop{background:rgba(5,9,18,.88);backdrop-filter:blur(4px)}
   .sec-head,.profile{grid-template-columns:1fr;gap:8px}
   .skills,.approach{grid-template-columns:1fr}
   .index{grid-template-columns:repeat(2,1fr)}
-  .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+  .bento{grid-template-columns:repeat(2,1fr);grid-template-rows:none;grid-auto-rows:170px}
+  .bento-item[style]{grid-column:span 1!important;grid-row:span 1!important}
   .phead .wrap{grid-template-columns:1fr}
   .phead .pnum{display:none}
 }
 @media (max-width:560px){
   .index{grid-template-columns:1fr}
-  .bento{grid-template-columns:1fr;grid-auto-rows:200px}
+  .discog{grid-template-columns:1fr}
+  .bento{grid-template-columns:1fr;grid-template-rows:none;grid-auto-rows:200px}
   .bento-item[style]{grid-column:span 1!important;grid-row:span 1!important}
   .corridor{height:min(60vh,320px)}
   .wall{grid-template-columns:1fr 1fr}
@@ -392,33 +389,6 @@ dialog.lb::backdrop{background:rgba(5,9,18,.88);backdrop-filter:blur(4px)}
   .icard{min-height:180px}
 }
 </style>
-
-<div class="bg-paths" aria-hidden="true"></div>
-<script>
-(function(){
-  var box=document.querySelector('.bg-paths');
-  if(!box) return;
-  var svgNS='http://www.w3.org/2000/svg';
-  var svg=document.createElementNS(svgNS,'svg');
-  svg.setAttribute('viewBox','0 0 696 316');
-  svg.setAttribute('preserveAspectRatio','xMidYMid slice');
-  function build(dir){
-    for(var i=0;i<13;i++){
-      var d='M-'+(380-i*5*dir)+' -'+(189+i*6)+'C-'+(380-i*5*dir)+' -'+(189+i*6)+' -'+(312-i*5*dir)+' '+(216-i*6)+' '+(152-i*5*dir)+' '+(343-i*6)+'C'+(616-i*5*dir)+' '+(470-i*6)+' '+(684-i*5*dir)+' '+(875-i*6)+' '+(684-i*5*dir)+' '+(875-i*6);
-      var p=document.createElementNS(svgNS,'path');
-      p.setAttribute('d',d);
-      p.setAttribute('pathLength','100');
-      p.setAttribute('stroke-opacity',(0.06+i*0.02).toFixed(2));
-      p.setAttribute('stroke-width',(0.5+i*0.05).toFixed(2));
-      p.style.animationDuration=(22+Math.random()*14).toFixed(1)+'s';
-      p.style.animationDelay=(-Math.random()*30).toFixed(1)+'s';
-      svg.appendChild(p);
-    }
-  }
-  build(1);build(-1);
-  box.appendChild(svg);
-})();
-</script>
 
 <header class="bar" id="bar">
   <div class="wrap">
@@ -580,7 +550,7 @@ dialog.lb::backdrop{background:rgba(5,9,18,.88);backdrop-filter:blur(4px)}
       <div>
         <span class="label">02 / 09 · Réalisations</span>
         <h1 tabindex="-1">Ce que j'ai <span class="it">tourné, monté</span> et dessiné</h1>
-        <p class="intro">Projets de cours et de l'agence fictive <b>Set Production</b>. Chaque vignette indique le logiciel principal utilisé.</p>
+        <p class="intro">Mes réalisations au cours de ma licence de communication.</p>
       </div>
       <span class="pnum" aria-hidden="true">02</span>
     </div>
@@ -867,7 +837,13 @@ dialog.lb::backdrop{background:rgba(5,9,18,.88);backdrop-filter:blur(4px)}
         <a href="https://open.spotify.com/intl-fr/artist/1Tl7DPNtfW27jMFtACqbm6" target="_blank" rel="noopener"><img src="media/perso-cover-nuage.jpg" alt=""><div><strong>Nuage</strong><small>2023</small></div></a>
         <a href="https://open.spotify.com/intl-fr/artist/1Tl7DPNtfW27jMFtACqbm6" target="_blank" rel="noopener"><img src="media/perso-cover.jpg" alt=""><div><strong>SAO PAULO</strong><small>2023</small></div></a>
         <a href="https://open.spotify.com/intl-fr/artist/1Tl7DPNtfW27jMFtACqbm6" target="_blank" rel="noopener"><img src="media/perso-cover-silencieux.jpg" alt=""><div><strong>Silencieux</strong><small>2022</small></div></a>
-        <a class="discog-all" href="https://open.spotify.com/intl-fr/artist/1Tl7DPNtfW27jMFtACqbm6" target="_blank" rel="noopener"><span>Toute la discographie sur Spotify</span><span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="discog-all-wrap">
+        <a class="btn btn-line btn-sm" href="https://open.spotify.com/intl-fr/artist/1Tl7DPNtfW27jMFtACqbm6" target="_blank" rel="noopener">
+          <span class="btn-face">Toute la discographie</span>
+          <span class="btn-face btn-face-hover" aria-hidden="true">Toute la discographie ↗</span>
+        </a>
       </div>
 
       <ol class="chain">
@@ -1065,10 +1041,10 @@ dialog.lb::backdrop{background:rgba(5,9,18,.88);backdrop-filter:blur(4px)}
   lb.addEventListener('click',function(e){if(e.target===lb)lb.close()});
 
   /* ---------- corridor 3D (Projet Perso) ---------- */
-  function buildCorridor(container,sources,opts){
+  function buildCorridor(container,tracks,opts){
     if(!container) return;
     var p={perspective:30,cardWidth:16,cardHeight:22,cardRadius:8,birthHeight:3,exitHeight:42,
-      railBirth:-11,railExit:42,fan:3.3,turnBirth:6,turnExit:26,stops:24,cards:sources.length,speed:18,axis:50};
+      railBirth:-11,railExit:42,fan:3.3,turnBirth:6,turnExit:26,stops:24,cards:tracks.length,speed:18,axis:50};
     for(var k in (opts||{})) p[k]=opts[k];
     var id='c'+Math.random().toString(36).slice(2,8);
     var rightName='ish-r-'+id,leftName='ish-l-'+id,cardClass='ish-c-'+id;
@@ -1091,14 +1067,16 @@ dialog.lb::backdrop{background:rgba(5,9,18,.88);backdrop-filter:blur(4px)}
     container.appendChild(styleEl);
     container.style.containerType='inline-size';
     var stage=document.createElement('div');
-    stage.setAttribute('aria-hidden','true');
     stage.style.cssText='position:absolute;inset:0;pointer-events:none;perspective:'+p.perspective+'cqw;perspective-origin:50% '+p.axis+'%';
     var world=document.createElement('div');
     world.style.cssText='position:absolute;inset:0;transform-style:preserve-3d';
     stage.appendChild(world);
     [rightName,leftName].forEach(function(name){
       for(var i=0;i<p.cards;i++){
-        var card=document.createElement('div');
+        var t=tracks[i%tracks.length];
+        var card=document.createElement('a');
+        card.href=t.href;card.target='_blank';card.rel='noopener';card.tabIndex=-1;
+        card.setAttribute('aria-label','Écouter '+t.title+' sur Spotify');
         card.className='corridor-card '+cardClass;
         card.style.left='50%';card.style.top=p.axis+'%';
         card.style.width=p.cardWidth+'cqw';card.style.height=p.cardHeight+'cqw';
@@ -1107,7 +1085,7 @@ dialog.lb::backdrop{background:rgba(5,9,18,.88);backdrop-filter:blur(4px)}
         card.style.animation=name+' '+p.speed+'s linear infinite';
         card.style.animationDelay=(-(i*p.speed)/p.cards)+'s';
         var im=document.createElement('img');
-        im.src=sources[i%sources.length];im.alt='';im.loading='lazy';im.decoding='async';im.draggable=false;
+        im.src=t.img;im.alt='';im.loading='lazy';im.decoding='async';im.draggable=false;
         card.appendChild(im);
         world.appendChild(card);
       }
@@ -1115,20 +1093,25 @@ dialog.lb::backdrop{background:rgba(5,9,18,.88);backdrop-filter:blur(4px)}
     container.insertBefore(stage,container.firstChild);
   }
   buildCorridor(document.getElementById('corridor'),[
-    'media/perso-cover-faineant.jpg','media/perso-cover-1000pas.jpg','media/perso-cover-vasy.jpg',
-    'media/perso-peinture.jpg','media/perso-cover-nuage.jpg','media/perso-cover.jpg','media/perso-cover-silencieux.jpg'
+    {img:'media/perso-cover-faineant.jpg',title:'FAINEANT_purc',href:'https://open.spotify.com/intl-fr/artist/1Tl7DPNtfW27jMFtACqbm6'},
+    {img:'media/perso-cover-1000pas.jpg',title:'1000 Pas',href:'https://open.spotify.com/intl-fr/artist/1Tl7DPNtfW27jMFtACqbm6'},
+    {img:'media/perso-cover-vasy.jpg',title:'Vas-y Viens',href:'https://open.spotify.com/intl-fr/track/63cuUSq0FSSN65IijQo8j0'},
+    {img:'media/perso-peinture.jpg',title:'Génération de Maudits',href:'https://open.spotify.com/intl-fr/artist/1Tl7DPNtfW27jMFtACqbm6'},
+    {img:'media/perso-cover-nuage.jpg',title:'Nuage',href:'https://open.spotify.com/intl-fr/artist/1Tl7DPNtfW27jMFtACqbm6'},
+    {img:'media/perso-cover.jpg',title:'SAO PAULO',href:'https://open.spotify.com/intl-fr/artist/1Tl7DPNtfW27jMFtACqbm6'},
+    {img:'media/perso-cover-silencieux.jpg',title:'Silencieux',href:'https://open.spotify.com/intl-fr/artist/1Tl7DPNtfW27jMFtACqbm6'}
   ]);
 
   /* ---------- galerie bento (Réalisations) ---------- */
   var bentoItems=[
-    {type:'yt',yt:'UYfM7MRttOI',title:'Set Production',desc:"Agence audiovisuelle fictive : émission, court-métrage, captations. Ingénieur du son sur les tournages.",img:'media/set-production.jpg',tool:'Pr',span:'grid-column:span 2;grid-row:span 2'},
-    {type:'yt',yt:'J1hnvEn8w40',title:'Habillage Set Prod',desc:"Animation du logo de l'agence.",img:'media/set-animation.jpg',tool:'Ae',span:''},
-    {type:'video',src:'media/tous-en-rythme.mp4',title:'Tous en Rythme',desc:"Production et captation de l'événement. Régisseur son aux côtés de la réalisatrice.",img:'media/tous-en-rythme.jpg',tool:'Pr',span:'grid-row:span 2'},
-    {type:'yt',yt:'pdb1blBSn-U',start:12,title:'Voyage & Vous',desc:"Émission : écriture et enregistrement d'une chronique, jeu ludo-éducatif.",img:'media/voyage-vous.jpg',tool:'TV',span:''},
-    {type:'yt',yt:'qTxT5HvOmyM',title:'Top Of The Pop',desc:"Show de divertissement musical en plateau.",img:'media/top-of-the-pop.jpg',tool:'TV',span:''},
-    {type:'image',img:'media/id-magazine.jpg',title:'Couverture ID Magazine',desc:"Couverture fictive dans un style Pop Art.",tool:'Ps',span:'grid-row:span 2'},
-    {type:'image',img:'media/jeu-cartes.jpg',title:'Jeu de cartes',desc:"Conception graphique d'un jeu complet.",tool:'Ai',span:'grid-column:span 2',contain:true,bg:'#DCE2C6'},
-    {type:'image',img:'media/galerie-musicale.jpg',title:'Galerie musicale',desc:"Une galerie néon imaginaire autour de ZLO.",tool:'Ps',span:''}
+    {type:'yt',yt:'UYfM7MRttOI',title:'Set Production',desc:"Agence audiovisuelle fictive : émission, court-métrage, captations. Ingénieur du son sur les tournages.",img:'media/set-production.jpg',tool:'Pr',span:'grid-column:1/3;grid-row:1/3'},
+    {type:'yt',yt:'J1hnvEn8w40',title:'Habillage Set Prod',desc:"Animation du logo de l'agence.",img:'media/set-animation.jpg',tool:'Ae',span:'grid-column:3/4;grid-row:1/2'},
+    {type:'yt',yt:'qTxT5HvOmyM',title:'Top Of The Pop',desc:"Show de divertissement musical en plateau.",img:'media/top-of-the-pop.jpg',tool:'TV',span:'grid-column:4/5;grid-row:1/2'},
+    {type:'video',src:'media/tous-en-rythme.mp4',title:'Tous en Rythme',desc:"Production et captation de l'événement. Régisseur son aux côtés de la réalisatrice.",img:'media/tous-en-rythme.jpg',tool:'Pr',span:'grid-column:3/5;grid-row:2/3'},
+    {type:'image',img:'media/id-magazine.jpg',title:'Couverture ID Magazine',desc:"Couverture fictive dans un style Pop Art.",tool:'Ps',span:'grid-column:1/3;grid-row:3/4'},
+    {type:'image',img:'media/jeu-cartes.jpg',title:'Jeu de cartes',desc:"Conception graphique d'un jeu complet.",tool:'Ai',span:'grid-column:3/5;grid-row:3/4',contain:true,bg:'#DCE2C6'},
+    {type:'yt',yt:'pdb1blBSn-U',start:12,title:'Voyage & Vous',desc:"Émission : écriture et enregistrement d'une chronique, jeu ludo-éducatif.",img:'media/voyage-vous.jpg',tool:'TV',span:'grid-column:1/3;grid-row:4/5'},
+    {type:'image',img:'media/galerie-musicale.jpg',title:'Galerie musicale',desc:"Une galerie néon imaginaire autour de ZLO.",tool:'Ps',span:'grid-column:3/5;grid-row:4/5'}
   ];
   var bentoBox=document.getElementById('bento');
   if(bentoBox){
